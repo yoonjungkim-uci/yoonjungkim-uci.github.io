@@ -103,7 +103,7 @@ nav ul a.active {
 
 .photo-placeholder {
   width: 200px;
-  height: 240px;
+  height: 250px;
   background: var(--light);
   border: 1px solid var(--border);
   display: flex;
