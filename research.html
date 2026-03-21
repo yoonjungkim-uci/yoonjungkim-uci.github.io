@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research | Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-name"><a href="index.html">Your Name</a></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="research.html" class="active">Research</a></li>
+      <li><a href="policy.html">Policy Work</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+    </ul>
+    <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+
+  <main class="page-content">
+    <h2>Research</h2>
+
+    <!-- PUBLICATIONS -->
+    <h3>Publications</h3>
+    <ul class="paper-list">
+
+      <li class="paper-item">
+        <span class="paper-title">"Title of Published Paper"</span>
+        <div class="paper-meta">
+          <em>Journal of [Field]</em>, Vol. X, No. Y, Month 2024, pp. 000–000.
+          With Co-Author Name.
+        </div>
+        <div class="paper-links">
+          <a href="#" target="_blank">Published Version</a>
+          <a href="#" target="_blank">Working Paper</a>
+          <button class="btn-abstract" onclick="toggleAbstract(this)">Abstract</button>
+        </div>
+        <div class="paper-abstract">
+          This paper studies [topic]. Using [data/method], we find that [main result].
+          Our results suggest that [implications]. We contribute to the literature by [contribution].
+        </div>
+      </li>
+
+    </ul>
+
+    <!-- WORKING PAPERS -->
+    <h3>Working Papers</h3>
+    <ul class="paper-list">
+
+      <li class="paper-item">
+        <span class="paper-title">"Title of Working Paper One"</span>
+        <div class="paper-meta">
+          NBER Working Paper No. XXXXX, 2024. With Co-Author Name.<br>
+          <em style="color:#888;">Under review at Journal Name</em>
+        </div>
+        <div class="paper-links">
+          <a href="#" target="_blank">Paper (PDF)</a>
+          <a href="#" target="_blank">NBER</a>
+          <a href="#" target="_blank">SSRN</a>
+          <button class="btn-abstract" onclick="toggleAbstract(this)">Abstract</button>
+        </div>
+        <div class="paper-abstract">
+          We examine [topic] using [data from X covering Y]. Exploiting quasi-random variation in [Z],
+          we estimate that [main finding]. This is economically significant because [interpretation].
+          We rule out [alternative explanations] and show robustness across [contexts].
+        </div>
+      </li>
+
+      <li class="paper-item">
+        <span class="paper-title">"Title of Working Paper Two"</span>
+        <div class="paper-meta">
+          2023. With Co-Author A and Co-Author B.
+        </div>
+        <div class="paper-links">
+          <a href="#" target="_blank">Paper (PDF)</a>
+          <button class="btn-abstract" onclick="toggleAbstract(this)">Abstract</button>
+        </div>
+        <div class="paper-abstract">
+          Abstract text goes here. Describe the question, the data, the method, the main finding,
+          and the contribution to the literature.
+        </div>
+      </li>
+
+    </ul>
+
+    <!-- WORK IN PROGRESS -->
+    <h3>Work in Progress</h3>
+    <ul class="paper-list">
+
+      <li class="paper-item">
+        <span class="paper-title">"Tentative Title of Ongoing Project"</span>
+        <div class="paper-meta">With Co-Author Name. Draft coming soon.</div>
+      </li>
+
+      <li class="paper-item">
+        <span class="paper-title">"Another Project in Progress"</span>
+        <div class="paper-meta">Solo-authored.</div>
+      </li>
+
+    </ul>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Name &mdash; Last updated: June 2025</p>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script>
+    function toggleAbstract(btn) {
+      const abstract = btn.closest('.paper-item').querySelector('.paper-abstract');
+      abstract.classList.toggle('open');
+      btn.textContent = abstract.classList.contains('open') ? 'Hide Abstract' : 'Abstract';
+    }
+  </script>
+</body>
+</html>

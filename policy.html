@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Policy Work | Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-name"><a href="index.html">Your Name</a></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="policy.html" class="active">Policy Work</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+    </ul>
+    <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+
+  <main class="page-content">
+    <h2>Policy Work</h2>
+
+    <p style="font-size:0.95rem; color:#444; margin-bottom:2rem; max-width:600px;">
+      Alongside my academic research, I engage with policy institutions and public discourse
+      on topics related to [your policy areas].
+    </p>
+
+    <!-- POLICY REPORTS / BRIEFS -->
+    <h3>Policy Reports &amp; Briefs</h3>
+    <ul class="paper-list">
+
+      <li class="paper-item">
+        <span class="paper-title">"Title of Policy Report or Brief"</span>
+        <div class="paper-meta">
+          Organization / Institution, Month 2024.
+          With Co-Author Name.
+        </div>
+        <div class="paper-links">
+          <a href="#" target="_blank">Report (PDF)</a>
+          <a href="#" target="_blank">Press Release</a>
+          <button class="btn-abstract" onclick="toggleAbstract(this)">Summary</button>
+        </div>
+        <div class="paper-abstract">
+          Brief summary of the policy report, the question it addresses, key findings,
+          and policy recommendations.
+        </div>
+      </li>
+
+      <li class="paper-item">
+        <span class="paper-title">"Another Policy Brief"</span>
+        <div class="paper-meta">Organization, 2023.</div>
+        <div class="paper-links">
+          <a href="#" target="_blank">Brief (PDF)</a>
+        </div>
+      </li>
+
+    </ul>
+
+    <!-- ADVISORY ROLES -->
+    <h3>Advisory &amp; Consulting Roles</h3>
+    <ul class="paper-list">
+
+      <li class="paper-item">
+        <span class="paper-title">Consultant / Advisor</span>
+        <div class="paper-meta">Organization Name, Year–Year</div>
+        <div class="paper-abstract open">
+          Brief description of the role and scope of work.
+        </div>
+      </li>
+
+    </ul>
+
+    <!-- MEDIA & OP-EDS -->
+    <h3>Media &amp; Op-Eds</h3>
+    <ul class="paper-list">
+
+      <li class="paper-item">
+        <span class="paper-title">"Op-Ed Title"</span>
+        <div class="paper-meta"><em>Publication Name</em>, Month Day, 2024.</div>
+        <div class="paper-links">
+          <a href="#" target="_blank">Read</a>
+        </div>
+      </li>
+
+      <li class="paper-item">
+        <span class="paper-title">Interview / Podcast appearance</span>
+        <div class="paper-meta"><em>Show / Outlet Name</em>, Month 2023.
+          Topic: [brief topic description].</div>
+        <div class="paper-links">
+          <a href="#" target="_blank">Listen / Watch</a>
+        </div>
+      </li>
+
+    </ul>
+
+    <!-- TESTIMONY -->
+    <h3>Congressional / Legislative Testimony</h3>
+    <p style="font-size:0.92rem; color:#777; font-style:italic;">
+      (Delete this section if not applicable)
+    </p>
+    <ul class="paper-list">
+
+      <li class="paper-item">
+        <span class="paper-title">Testimony before [Committee Name]</span>
+        <div class="paper-meta">U.S. Senate / House, Month Day, Year. Topic: [subject].</div>
+        <div class="paper-links">
+          <a href="#" target="_blank">Written Testimony (PDF)</a>
+        </div>
+      </li>
+
+    </ul>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Name &mdash; Last updated: June 2025</p>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script>
+    function toggleAbstract(btn) {
+      const abstract = btn.closest('.paper-item').querySelector('.paper-abstract');
+      abstract.classList.toggle('open');
+      btn.textContent = abstract.classList.contains('open') ? 'Hide Summary' : 'Summary';
+    }
+  </script>
+</body>
+</html>
